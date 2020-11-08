@@ -2,7 +2,7 @@
 	<div class="banner">
 		<div class="container">
 			<div class="banner-left">
-				<img src="<?php echo "$host"; ?>/public/images/elefante_t.png" alt=" " class="img-responsive" />
+				<img src="<?php echo "$host"; ?>/phppa/site/www/public/images/elefante_t.png" alt=" " class="img-responsive" />
 			</div>
 			<div class="banner-info">
 				<h1><span>Uma <b>comunidade</b> de Desenvolvedores <b>PHP</b> do estado do Pará</span></h1>
@@ -79,7 +79,7 @@
 
 							});
 					</script>
-					<script type="text/javascript" src="<?php echo "$host"; ?>/public/js/jquery.flexisel.js"></script>
+					<script type="text/javascript" src="<?php echo "$host"; ?>/phppa/site/www/public/js/jquery.flexisel.js"></script>
 			</div>
 		</div>
 	</div>
@@ -146,22 +146,22 @@
 					<h4>Fotos</h4>
 					<div id="owl-demo" class="owl-carousel owl-theme">
 						<div class="item agile-item">
-							<img src="<?php echo "$host"; ?>/public/images/10.jpg" class="encontros-w3img" alt=""/>
+							<img src="<?php echo "$host"; ?>/phppa/site/www/public/images/10.jpg" class="encontros-w3img" alt=""/>
 						</div>
 						<div class="item agile-item">
-							<img src="<?php echo "$host"; ?>/public/images/12.jpg" class="encontros-w3img" alt=""/>
+							<img src="<?php echo "$host"; ?>/phppa/site/www/public/images/12.jpg" class="encontros-w3img" alt=""/>
 						</div>
 						<div class="item agile-item">
-							<img src="<?php echo "$host"; ?>/public/images/13.jpg" class="encontros-w3img" alt=""/>
+							<img src="<?php echo "$host"; ?>/phppa/site/www/public/images/13.jpg" class="encontros-w3img" alt=""/>
 						</div>
 						<div class="item agile-item">
-							<img src="<?php echo "$host"; ?>/public/images/14.jpg" class="encontros-w3img" alt=""/>
+							<img src="<?php echo "$host"; ?>/phppa/site/www/public/images/14.jpg" class="encontros-w3img" alt=""/>
 						</div>
 						<div class="item agile-item">
-							<img src="<?php echo "$host"; ?>/public/images/15.jpg" class="encontros-w3img" alt=""/>
+							<img src="<?php echo "$host"; ?>/phppa/site/www/public/images/15.jpg" class="encontros-w3img" alt=""/>
 						</div>
 						<div class="item agile-item">
-							<img src="<?php echo "$host"; ?>/public/images/16.jpg" class="encontros-w3img" alt=""/>
+							<img src="<?php echo "$host"; ?>/phppa/site/www/public/images/16.jpg" class="encontros-w3img" alt=""/>
 						</div>
 					</div>
 
@@ -257,7 +257,7 @@
 					<h5>Apoiadores</h5>
 					<div class="row">
 						<div class="col-lg-5">
-							<a href="https://www.hosthp.com.br" target="_blank"><img src="public/images/hosthp.png"></a>
+							<a href="https://www.hosthp.com.br" target="_blank"><img src="/phppa/site/www/public/images/hosthp.png"></a>
 						</div>
 					</div>
 				</div>
@@ -287,8 +287,6 @@
 							<a href="https://phpmg.com/"><img src="https://phpmg.com/img/logo-php.png" height="40"></a>
 						</div> -->
 					</div>
-
-
 				</div>
 			</div>
 

@@ -24,9 +24,9 @@ if ($_GET) {
 		function hideURLbar(){ window.scrollTo(0,1); }
 </script>
 <!-- //for-mobile-apps -->
-<link href="<?php echo "$host"; ?>/public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="<?php echo "$host"; ?>/public/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
-<link href="<?php echo "$host"; ?>/public/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo "$host"; ?>/phppa/site/www/public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo "$host"; ?>/phppa/site/www/public/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
+<link href="<?php echo "$host"; ?>/phppa/site/www/public/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
 <script src="<?php echo "$host"; ?>/public/js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
@@ -34,7 +34,7 @@ if ($_GET) {
 <link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 </head>
 
-<link rel="shortcut icon" href="<?php echo "$host"; ?>/public/images/phppa-icon.png">
+<link rel="shortcut icon" href="<?php echo "$host"; ?>/phppa/site/www/public/images/phppa-icon.png">
 
 <body>
 <!-- header -->
@@ -52,8 +52,8 @@ if ($_GET) {
 					  </button>
 						<div class="logo">
 							<!-- <a class="navbar-brand" href="<?php //echo "$host"; ?>">PHPPA.ORG <span>Grupo de desenvolvedores de PHP do estado do Pará</span></a> -->
-							<a class="navbar-brand" href="<?php echo "$host"; ?>">
-								<img src="<?php echo "$host"; ?>/public/images/phppa.png" width="200">
+							<a class="navbar-brand" href="<?php echo "$host"; ?>/phppa/site/www">
+								<img src="<?php echo "$host"; ?>/phppa/site/www/public/images/phppa.png" width="200">
 							</a>
 						</div>
 					</div>
@@ -61,11 +61,11 @@ if ($_GET) {
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					 <ul class="nav navbar-nav cl-effect-14">
-						<li><a href="<?php echo "$host"; ?>" class="active">Início</a></li>
-						<li><a href="<?php echo "$host"; ?>/comunidade">Como Contribuir</a></li>
-						<li><a href="<?php echo "$host"; ?>/comunidade">A Comunidade</a></li>
-						<li><a href="#">Artigos</a></li>
-						<li><a href="<?php echo "$host"; ?>/contato">Contato</a></li>
+						<li><a href="<?php echo "$host"; ?>/phppa/site/www" class="active">Início</a></li>
+						<li><a href="<?php echo "$host"; ?>/phppa/site/www/comunidade">Como Contribuir</a></li>
+						<li><a href="<?php echo "$host"; ?>/phppa/site/www/comunidade">A Comunidade</a></li>
+						<li><a href="<?php echo "$host"; ?>/phppa/site/www/artigos">Artigos</a></li>
+						<li><a href="<?php echo "$host"; ?>/phppa/site/www/contato">Contato</a></li>
 					  </ul>
 					</div><!-- /.navbar-collapse -->
 				</nav>
@@ -125,10 +125,10 @@ else {
 	</div>
 <!--//footer-->
 <!-- for bootstrap working -->
-		<script src="<?php echo "$host"; ?>/public/js/bootstrap.js"> </script>
-		<script src="<?php echo "$host"; ?>/public/js/owl.carousel.js"> </script>
+		<script src="<?php echo "$host"; ?>/phppa/site/www/public/js/bootstrap.js"> </script>
+		<script src="<?php echo "$host"; ?>/phppa/site/www/public/js/owl.carousel.js"> </script>
 <!-- //for bootstrap working -->
-		<script src="<?php echo "$host"; ?>/public/js/funcoes.js"> </script>
+		<script src="<?php echo "$host"; ?>/phppa/site/www/public/js/funcoes.js"> </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
