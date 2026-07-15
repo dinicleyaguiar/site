@@ -62,7 +62,7 @@ if (isset($_GET['cod'])) {
 						<li><a href="<?php echo "$host"; ?>/" class="active">Início</a></li>
 						<li><a href="<?php echo "$host"; ?>/comunidade">Como Contribuir</a></li>
 						<li><a href="<?php echo "$host"; ?>/comunidade">A Comunidade</a></li>
-						<li><a href="<?php echo "$host"; ?>/artigos">Artigos</a></li>
+						<li><a href="<?php echo "$host"; ?>/#artigos">Artigos</a></li>
 						<li><a href="<?php echo "$host"; ?>/contato">Contato</a></li>
 					  </ul>
 					</div><!-- /.navbar-collapse -->
@@ -90,8 +90,8 @@ else {
 					<ul>
 						<li><a href="<?php echo "$host"; ?>/comunidade">Como Contribuir</a></li>
 						<li><a href="<?php echo "$host"; ?>/comunidade">A Comunidade</a></li>
-						<li><a href="#">Artigos</a></li>
-						<li><a href="#">Eventos</a></li>
+						<li><a href="<?php echo "$host"; ?>/#artigos">Artigos</a></li>
+						<li><a href="<?php echo "$host"; ?>/#eventos">Eventos</a></li>
 						<li><a href="<?php echo "$host"; ?>/contato">Contato</a></li>
 					</ul>
 				</div>
@@ -113,10 +113,9 @@ else {
 			<p>Copyright © <?php echo date("Y"); ?>. Design by <a target="_blank" href="https://w3layouts.com">W3layouts</a></p>
 			<div class="social-icons">
 				<ul>
-					<li><a href="https://www.facebook.com/elephants.para/" target="_balnk" class="fb"></a></li>
-					<li><a href="https://twitter.com/phppara" target="_balnk"></a></li>
-					<li><a href="https://github.com/elephantspara" target="_balnk" class="gg"></a></li>
-					<li><a href="#" class="pn"></a></li>
+					<li><a href="https://www.facebook.com/elephants.para/" target="_blank" rel="noopener noreferrer" class="fb" aria-label="PHPPA no Facebook"></a></li>
+					<li><a href="https://twitter.com/phppara" target="_blank" rel="noopener noreferrer" aria-label="PHPPA no Twitter"></a></li>
+					<li><a href="https://github.com/phppara" target="_blank" rel="noopener noreferrer" class="gg" aria-label="PHPPA no GitHub"></a></li>
 				</ul>
 			</div>
 		</div>
