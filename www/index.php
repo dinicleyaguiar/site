@@ -11,7 +11,7 @@ if (isset($_GET['cod'])) {
 <!DOCTYPE html>
 <html>
 <head>
-<title>Grupo de desenvolvedores de PHP do estado do Pará | PHPPA.ORG</title>
+<title> Grupo de desenvolvedores de PHP do estado do Pará | PHPPA.ORG </title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
