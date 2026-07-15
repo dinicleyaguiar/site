@@ -4,7 +4,8 @@ services:
     ports:
       - '8031:80'
     depends_on:
-      - php
+      php:
+        condition: service_healthy
     volumes:
       - ./www:/opt/work
     container_name: site_phppa_nginx
@@ -17,3 +18,8 @@ services:
       XDEBUG_CONFIG: "client_host=host.docker.internal"
       PHP_IDE_CONFIG: "serverName=xdebug-docker"
     container_name: site_phppa_php
+    healthcheck:
+      test: ["CMD-SHELL", "php-fpm -t"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
