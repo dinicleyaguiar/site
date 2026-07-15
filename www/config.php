@@ -1,19 +1,11 @@
 <?php
 
-$result = array();
-$fp = fopen(__DIR__.'/.env', 'r');
-while(!feof($fp)){
-    $linha = fgets($fp, 4096);
-    if (!empty($linha)) {
-        $ex = explode("=", $linha);
-        $result[$ex["0"]] = trim($ex["1"]);
-    }
-}
-fclose($fp);
+$envFile = __DIR__ . '/.env';
+$result = is_file($envFile) ? (parse_ini_file($envFile, false, INI_SCANNER_RAW) ?: []) : [];
 
-$dadosEmail = array(
-		"host" => $result['EMAIL_HOST'],
-		"username" => $result['EMAIL_USERNAME'],
-		"password" => $result['EMAIL_PASSWORD'],
-		"email" => $result['EMAIL_USERNAME']
-	);
+$dadosEmail = [
+    'host' => $result['EMAIL_HOST'] ?? '',
+    'username' => $result['EMAIL_USERNAME'] ?? '',
+    'password' => $result['EMAIL_PASSWORD'] ?? '',
+    'email' => $result['EMAIL_USERNAME'] ?? '',
+];

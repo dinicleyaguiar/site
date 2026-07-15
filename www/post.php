@@ -1,18 +1,21 @@
 <?php
-$action = $_GET["action"];
+$action = $_GET["action"] ?? '';
 
 if ($action == "contato") {
 
-	$nome = $_POST["nome"];
-	$email = $_POST["email"];
-	$assunto = $_POST["assunto"];
-	$mensagem = $_POST["mensagem"];
+	$nome = trim($_POST["nome"] ?? '');
+	$email = trim($_POST["email"] ?? '');
+	$assunto = trim($_POST["assunto"] ?? '');
+	$mensagem = trim($_POST["mensagem"] ?? '');
 
 	if ($nome == "") {
 		echo "<div class='alert alert-danger' role='alert'>Nome em branco...</div>";
 	}
 	elseif($email == ""){
 		echo "<div class='alert alert-danger' role='alert'>Email em branco...</div>";
+	}
+	elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		echo "<div class='alert alert-danger' role='alert'>Email inválido...</div>";
 	}
 	elseif($assunto == ""){
 		echo "<div class='alert alert-danger' role='alert'>Assunto em branco...</div>";
@@ -24,7 +27,7 @@ if ($action == "contato") {
 
 		include 'config.php';
 		require 'vendor/autoload.php';
-		$mail = new PHPMailer;
+		$mail = new PHPMailer\PHPMailer\PHPMailer(true);
 
 		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -45,11 +48,11 @@ if ($action == "contato") {
 		$mail->isHTML(true);                                  // Set email format to HTML
 
 		$mail->Subject = "[CONTATO SITE] - $assunto";
-		$mail->Body    =  "<b>Nome</b> $nome<br>
-						   <b>Email</b> $email<br>
+		$mail->Body    =  "<b>Nome</b> " . htmlspecialchars($nome) . "<br>
+						   <b>Email</b> " . htmlspecialchars($email) . "<br>
 						   <b>Data</b> $data<br>
-						   <b>Assunto</b> $assunto<br>
-						   <b>Mensagem:</b> $mensagem";
+						   <b>Assunto</b> " . htmlspecialchars($assunto) . "<br>
+						   <b>Mensagem:</b> " . nl2br(htmlspecialchars($mensagem));
 
 		if(!$mail->send()) {
 		    echo "<div class='alert alert-danger' role='alert'>Não foi possível enviar o contato...</div>";
