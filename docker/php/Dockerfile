@@ -16,8 +16,12 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY ./xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 COPY ./dockerhero.fpm.conf /usr/local/etc/php-fpm.d/zzz-dockerhero.fpm.conf
 COPY ./dockerhero.php.ini /usr/local/etc/php/conf.d/dockerhero.php.ini
+COPY ./entrypoint.sh /usr/local/bin/phppa-entrypoint
 COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 
-RUN usermod -u 1000 www-data
+RUN chmod +x /usr/local/bin/phppa-entrypoint \
+    && usermod -u 1000 www-data
 
 WORKDIR /opt/work
+
+CMD ["phppa-entrypoint"]

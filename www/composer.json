@@ -1,5 +1,14 @@
 {
+	"name": "phppara/site",
+	"description": "Site da comunidade de desenvolvedores PHP do estado do Pará",
+	"license": "MIT",
 	"require": {
+		"php": "^8.3",
 		"phpmailer/phpmailer": "^6.9"
+	},
+	"config": {
+		"allow-plugins": {},
+		"optimize-autoloader": true,
+		"sort-packages": true
 	}
 }

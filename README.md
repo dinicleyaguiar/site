@@ -1,32 +1,64 @@
-![PHPPA Logo!](/phppa-logo.png?raw=true)
+# PHPPA
 
-## O que é?
+Site da comunidade de desenvolvedores PHP do estado do Pará.
 
-UMA COMUNIDADE DE DESENVOLVEDORES PHP DO ESTADO DO PARÁ
-Una-se a esta comunidade
+## Requisitos
 
-## QUEM É A COMUNIDADE?
+- Docker Desktop com Docker Compose; ou
+- PHP 8.3+ e Composer 2 para execução sem contêineres.
 
-Todos que de alguma forma ajudam e participam da comunidade. Você que aparece nos encontros, postam artigos, ajuda no site, nos projetos, códigos, redes sociais ou que comentam nas redes sociais.
+## Executar com Docker
 
-## PAIXÃO? 
+Na raiz do projeto:
 
-A paixão que nos envolve é a de sempre aprender, ensinar, conversar e debater sobre PHP.
+```bash
+docker compose up --build
+```
 
-## OBJETIVO?
+O site estará disponível em <http://localhost:8031>.
 
-O objetivo da comunidade de desenvolvedores PHPPA é difundir a linguagem PHP por todo estado do Pará, aproximar programadores de nossa região, unir forças, trocar experiencias, ideias, realizando eventos para promover networking e troca de insformações.
+Para encerrar:
 
-## ACOMPANHE A COMUNIDADE PHPPA
+```bash
+docker compose down
+```
 
-*   Site comunidade PHPPA: (https://phppa.org/)
-*   Facebook:[@elephants.para] (https://www.facebook.com/elephants.para/)
-*   Twitter:[@phppara] (https://twitter.com/phppara) 
-*   GitHub:[@phppara] (https://github.com/phppara/) 
+O Xdebug fica desligado por padrão. Para ativá-lo no PowerShell:
 
+```powershell
+$env:XDEBUG_MODE = "debug"
+docker compose up --build
+```
 
+## Executar com PHP local
 
+Instale as dependências e inicie o servidor na raiz do projeto:
 
+```bash
+composer install --working-dir=www
+php -S localhost:8031 -t www www/index.php
+```
 
+## Formulário de contato
 
+Copie o arquivo de exemplo e informe as credenciais SMTP:
 
+```powershell
+Copy-Item www/.env.example www/.env
+```
+
+O arquivo `www/.env` é ignorado pelo Git e não deve ser versionado.
+
+## Validação
+
+```powershell
+Get-ChildItem www -Filter '*.php' | ForEach-Object { php -l $_.FullName }
+composer validate --working-dir=www --strict
+```
+
+## Comunidade
+
+- Site: <https://phppa.org/>
+- Facebook: <https://www.facebook.com/elephants.para/>
+- Twitter: <https://twitter.com/phppara>
+- GitHub: <https://github.com/phppara/>
