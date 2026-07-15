@@ -39,23 +39,6 @@ composer install --working-dir=www
 php -S localhost:8031 -t www www/index.php
 ```
 
-## Formulário de contato
-
-Copie o arquivo de exemplo e informe as credenciais SMTP:
-
-```powershell
-Copy-Item www/.env.example www/.env
-```
-
-O arquivo `www/.env` é ignorado pelo Git e não deve ser versionado.
-
-## Validação
-
-```powershell
-Get-ChildItem www -Filter '*.php' | ForEach-Object { php -l $_.FullName }
-composer validate --working-dir=www --strict
-```
-
 ## Comunidade
 
 - Site: <https://phppa.org/>
