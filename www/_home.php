@@ -85,7 +85,7 @@
 	</div>
 <!-- banner -->
 <!-- events -->
-	<div class="events">
+	<div class="events" id="eventos">
 		<div class="container">
 			<div class="events-grids">
 				<div class="col-md-4 events-grid">
@@ -142,7 +142,7 @@
 		<div class="container">
 			<div class="row">
 
-				<div class="col-lg-6 col-md-6">
+				<div class="col-lg-6 col-md-6" id="artigos">
 					<h4>Fotos</h4>
 					<div id="owl-demo" class="owl-carousel owl-theme">
 						<div class="item agile-item">
